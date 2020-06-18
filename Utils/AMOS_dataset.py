@@ -8,7 +8,7 @@ from Learning.handcrafted_modules import *
 from tqdm import tqdm
 from scipy import spatial
 from shapely.geometry import Polygon
-from SparseImgRepresenter import ScaleSpaceAffinePatchExtractor
+from Utils.SparseImgRepresenter import ScaleSpaceAffinePatchExtractor
 from dataclasses import dataclass
 
 
