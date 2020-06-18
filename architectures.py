@@ -12,8 +12,6 @@ from fastai2.vision.all import *
 # from torch.utils import load_state_dict_from_url
 from torch.nn import functional as tf
 from Learning.learning import *
-from DARTS.genotypes import *
-from DARTS.model import NetworkCIFAR
 from sklearn.preprocessing import normalize
 
 
@@ -155,13 +153,6 @@ def archs():
         'Rc3': partial(ResNet_new, layers=[16,32,64,128], resblock=ResBlock_c3),
         'Rc3x': partial(ResNet_new, layers=[32, 64, 64, 128], resblock=ResBlock_c3),
         'Rc2': partial(ResNet_new, layers=[32, 64, 64, 128], resblock=ResBlock_c2),
-
-        # 'darts20': partial(NetworkCIFAR, C=16, layers=20, auxiliary=False, genotype=found, channels=1),
-        'dartsMY095121': partial(NetworkCIFAR, C=16, layers=20, auxiliary=False, genotype=MY095121, channels=1), #eval-FOUND-20200513-223405
-        'MY220633': partial(NetworkCIFAR, C=16, layers=20, auxiliary=False, genotype=MY220633, channels=1),
-        'MY220637': partial(NetworkCIFAR, C=16, layers=20, auxiliary=False, genotype=MY220637, channels=1),
-        'MY203403': partial(NetworkCIFAR, C=16, layers=20, auxiliary=False, genotype=MY203403, channels=1),
-        'MY200741': partial(NetworkCIFAR, C=16, layers=20, auxiliary=False, genotype=MY203403, channels=1),
 
         'l2net': L2Net,
     }
